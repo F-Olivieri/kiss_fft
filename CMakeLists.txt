@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 3.0)
 
 project(KissFFT VERSION 1.3.0)
 
-add_library(kiss_fft SHARED
+add_library(kiss_fft STATIC
   # main FFT implementation
   kiss_fft.c
   # from the tools/ directory
-  tools/kfc.c 
-  tools/kiss_fftnd.c 
-  tools/kiss_fftndr.c 
+  tools/kfc.c
+  tools/kiss_fftnd.c
+  tools/kiss_fftndr.c
   tools/kiss_fftr.c
   )
 
