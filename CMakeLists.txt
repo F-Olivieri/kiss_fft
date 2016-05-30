@@ -5,6 +5,8 @@ project(KissFFT VERSION 1.3.0)
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -flto -O2 -mtune=native")
 
+add_definitions(-DFIXED_POINT=32)
+
 add_library(kiss_fft STATIC
   # main FFT implementation
   kiss_fft.c
